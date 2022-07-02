@@ -17,9 +17,9 @@ function generateMarkdown(data) {
 `;
 }
 
-// let H2 = `##${process.argv[2]}`
-// fs.appendFile('README.md', H2, (err) =>
-//   err ? console.error(err) : console.log('Success!')
-// );
+let H2 = `##${process.argv[2]}`
+fs.appendFile('README.md', H2, (err) =>
+  err ? console.error(err) : console.log('Success!')
+);
 
 module.exports = generateMarkdown;
