@@ -26,10 +26,10 @@ inquirer.prompt([
     } // test
 ])
 .then((answers) => {
-    let question1 = `## Project Title?\n`
-    let question2 = `## Description?\n`
-    let question3 = `## What Problem does it Solve?\n`
-    let question4 = `## How does it work?\n`
+    let question1 = `## Project Title?\n\n`
+    let question2 = `## Description?\n\n`
+    let question3 = `## What Problem does it Solve?\n\n`
+    let question4 = `## How does it work?\n\n`
     const questionsAll = [question1, question2, question3, question4];
 
     let answer1 = answers.README1
@@ -37,12 +37,31 @@ inquirer.prompt([
     let answer3 = answers.README3 
     let answer4 = answers.README4 
     const answersAll = [answer1, answer2, answer3, answer4];
-    let pairs = `${question2}${answer2}`
+    //let pairs = `${question2}${answer2}`
+    let welcomeNote = `# Welcome to ${answer1} App!\n\n`
 
-    
-    fs.writeFile('README.md', pairs, (err) => {
+    fs.writeFile('README.md', welcomeNote, (err) => {
         err ? console.error(err) : console.log('Success!')
     });
+    
+    for (const question of questionsAll){
+        //createFormat(question, answersAll) 
+        fs.appendFile('README.md', question, (err) => {
+            err ? console.error(err) : console.log('Success!')
+        });
+
+        // answersAll.forEach(answer => {
+        //     let answersStr = answer
+        //     fs.appendFile('README.md', ('\n', answersStr, '\n'), (err) => {
+        //         err ? console.error(err) : console.log('Answer!')
+        //     });
+        // })
+        // for (const answer of answersAll){
+        //     fs.appendFile('README.md', ('\n',answer, '\n'), (err) => {
+        //         err ? console.error(err) : console.log('Answer!')
+        //     });
+        // }
+    }
     
 })
 .catch((err) => {
@@ -85,9 +104,13 @@ inquirer.prompt([
         //})
     //})
 
+// 5. const readMeFile = `${data.name}.md` //.md or .json ?
 
 // TODO: Create a function to write README file = Write to Disk
 //function writeToFile(fileName, data) {}
+// function createFormat(questions, answers) {
+//     console.log(`${questions}\n${answers}`)
+// }
 
 // let H2 = `##Description:${}\n`
 
