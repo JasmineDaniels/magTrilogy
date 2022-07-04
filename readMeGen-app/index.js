@@ -3,7 +3,7 @@ console.log(`Program Started`)
 const inquirer = require('inquirer')
 const fs = require('fs')
 
-inquirer.prompt([
+inquirer.prompt([ // ADD LINKS readme Markdown [title](https://www.example.com) ![alt text](image.jpg)
     {
         type: 'input',
         message: 'Project Name?',
@@ -45,14 +45,14 @@ inquirer.prompt([
     let answer4 = answers.README4 
     let answer5 = answers.README5 
     //const answersAll = [answer1, answer2, answer3, answer4];
-    let pairs1 = `${question1}${answer1}\n`
-    let pairs2 = `${question2}${answer2}\n`
-    let pairs3 = `${question3}${answer3}\n`
-    let pairs4 = `${question4}${answer4}\n`
-    let pairs5 = `${question5}${answer5}\n`
+    let pairs1 = `${question1}${answer1}\n\n`
+    let pairs2 = `${question2}${answer2}\n\n`
+    let pairs3 = `${question3}${answer3}\n\n`
+    let pairs4 = `${question4}${answer4}\n\n`
+    let pairs5 = `${question5}${answer5}\n\n`
     let pairs = [pairs1, pairs2, pairs3, pairs4, pairs5]
-    let welcomeNote = `# Welcome to ${answer1} App!\n\n`
 
+    let welcomeNote = `# Welcome to ${answer1} App!\n\n`
     fs.writeFile('README.md', welcomeNote, (err) => {
         err ? console.error(err) : console.log('Success!')
     });
