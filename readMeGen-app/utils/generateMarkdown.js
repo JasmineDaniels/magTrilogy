@@ -22,8 +22,8 @@ let generateMarkdown = (answers) => {
   let question2 = `## Description?\n\n`
   let question3 = `## What Problem does it Solve?\n\n`
   let question4 = `### How to Use?\n\n`
-  let question5 = `### Deployed Link: [title](https://www.example.com)\n\n`
-  let question6 = `### Image Link: ![alt text](image.jpg)\n\n`
+  let question5 = `### Deployed Link:\n\n`
+  let question6 = `### Demo Link:\n\n`
   let question7 = `## Credits\n\n` //Any Collaborators, Tutorials, etc that require Recognition?
   let question8 = `## License\n\n` // choice
   let question9 = `### Email\n\n`

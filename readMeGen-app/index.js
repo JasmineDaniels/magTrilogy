@@ -1,10 +1,8 @@
-console.log(`Program Started`)
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const generateMarkdown = require('./utils/generateMarkdown')
-//const fs = require('fs')
 
- // TODO: Create a function to initialize app
+// TODO: Create a function to initialize app
 function init() {
     inquirer.prompt([ 
         {
@@ -50,12 +48,12 @@ function init() {
         },
         {
             type: 'input',
-            message: 'Email:',
+            message: 'Email:[Contact Us](mailto:admin@example.com)',
             name: 'README9',
         },
         {
             type: 'input',
-            message: 'Github:',
+            message: 'Github: [title](https://www.example.com)',
             name: 'README10',
         },  // test
     ])
@@ -70,14 +68,7 @@ function init() {
 // // Function call to initialize app
 init();
 
-// // TODO: Create a function to initialize app
-// prompt init function 
 
-// function init() { // process.argv[2]
-//     const npm = 'npm i' //string
-//     console.log(npm)
-//     console.log(generateMarkdown.init())
-// }
 
 // class initialize {
 //     constructor (dependencies){
@@ -85,34 +76,8 @@ init();
 //     }
 // }
 
-//   for (const pair of pairs){ // change to map loop?
-    //     fs.appendFile('README.md', pair, (err) => {
-    //         err ? console.error(err) : console.log('Success!')
-    //     });
-    //   }
-
-// 4. Map Loop  
-// const writeToDisk = pairs.map(pair => {
-//     //Copy of readmeObj
-//     const newreadObj = {...pair};
-//     fs.appendFile('README.md', newreadObj, (err) => {
-//         err ? console.error(err) : console.log('Success!')
-//     });
-// })
-//   writeToDisk
-
-//   let readMEGen = `${pair0}${question1}${installList}${question2}${answer2}\n\n${question3}${answer3}\n\n
-//   ${install}${question4}${answer4}\n\n${checkout}${question5}${answer5}\n\n
-//   ${question6}${answer6}\n\n${question7}${answer7}\n\n`
-
 // let prompt = inquirer.createPromptModule()
 // prompt(questionsAll).then()
-
-//return `${question1}, ${answer1}`
-
-// 2. for (const question of questions){}
-
-// 3. const { message } = readmeObj
 
 // 4. const writeToDisk = pairs.map(pair => {
         //     Copy of readmeObj
@@ -125,12 +90,4 @@ init();
 
 // 5. const readMeFile = `${data.name}.md` //.md or .json ?
 
-// 6.    For Each  
-        //newreadObj.forEach(question => {
-            //console.log(question) //append data to readme
-        //})
-        // console.log(question)
-        //})
-
-// TODO: Create a function to write README file = Write to Disk
 
