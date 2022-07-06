@@ -37,7 +37,7 @@ node index.js
 
 ### Demo Link:
 
-![READMEGen Demo](./readMeGen-app/img/example.png)
+![READMEGen Demo](./readMeGen-app/img/readmeGen.mp4)
 
 ## Credits
 
