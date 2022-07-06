@@ -37,7 +37,7 @@ node index.js
 
 ### Demo Link:
 
-![READMEGen Demo](https://drive.google.com/file/d/1bSbB8JdbHnBto_ZCW7jkaTGrU-if7aTr/view?usp=sharing)
+[READMEGen Demo](https://drive.google.com/file/d/1bSbB8JdbHnBto_ZCW7jkaTGrU-if7aTr/view?usp=sharing)
 
 ## Credits
 
