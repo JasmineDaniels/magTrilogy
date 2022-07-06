@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const generateMarkdown = require('./utils/generateMarkdown')
 
 

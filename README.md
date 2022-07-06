@@ -39,6 +39,10 @@ node index.js
 
 [READMEGen Demo](https://drive.google.com/file/d/1bSbB8JdbHnBto_ZCW7jkaTGrU-if7aTr/view?usp=sharing)
 
+### Image:
+
+![READMEGen Image](./readMeGen-app/img/readmegen.png)
+
 ## Credits
 
 
