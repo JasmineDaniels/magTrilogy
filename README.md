@@ -33,23 +33,22 @@ node index.js
 
 ### Deployed Link: (Example)
 
-![READMEGen Demo](./img/example.png) 
+[READMEGen](https://www.google.com) 
 
 ### Demo Link:
 
-[READMEGen](https://www.google.com)
+![READMEGen Demo](./readMeGen-app/img/example.png)
 
 ## Credits
 
 
 
-## License
+## License & Badges
 
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white),![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black),![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
-Test
 
-![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black),![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white),[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)]
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Contact
 

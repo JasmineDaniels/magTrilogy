@@ -1,21 +1,74 @@
+const inquirer = require('inquirer')
 const fs = require('fs')
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-//function renderLicenseBadge(license) {}
+// TODO: Create a function to initialize app
+function init() {
+  inquirer.prompt([ 
+      {
+          type: 'input',
+          message: 'Project Name?',
+          name: 'README1',
+      },
+      {
+          type: 'input',
+          message: 'Description?',
+          name: 'README2',
+      },
+      {
+          type: 'input',
+          message: 'What Problem does it Solve?',
+          name: 'README3',
+      },
+      {
+          type: 'input',
+          message: 'How to use?',
+          name: 'README4',
+      },
+      {
+          type: 'input',
+          message: 'Deployed Link: [title](https://www.example.com)',
+          name: 'README5',
+      },
+      {
+          type: 'input',
+          message: 'Image Link: ![alt text](image.jpg)',
+          name: 'README6',
+      },
+      {
+          type: 'input',
+          message: 'Any Collaborators, Tutorials, etc that require Recognition?',
+          name: 'README7',
+      },
+      {
+          type: 'checkbox',
+          message: 'License / Badge',
+          choices: ['![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)', new inquirer.Separator(), '![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)', new inquirer.Separator(), '![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)',new inquirer.Separator(),'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)', new inquirer.Separator(),'[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'], 
+          name: 'README8',
+      },
+      {
+          type: 'input',
+          message: 'Email:[Contact Us](mailto:admin@example.com)',
+          name: 'README9',
+      },
+      {
+          type: 'input',
+          message: 'Github: [title](https://www.example.com)',
+          name: 'README10',
+      },  // test
+  ])
+  .then((answers) => {
+  generateMarkdown(answers)
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-//function renderLicenseLink(license) {} // table of contents
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-//function renderLicenseSection(license) {}
+  })
+  .catch((err) => {
+      console.log(err)
+  })
+}
 
 // TODO: Create a function to generate markdown for README
 let generateMarkdown = (answers) => {
-  // The prompts ask the questions to get the answers you need
-  // The readmegen questions are the ones that are printed on the readme
+  // The prompts ask the questions to get the answers you need from the console.
+  // The generateMarkdown questions are the ones that are printed to the readme.
 
   //Questions
   let question1 = `## Table of Contents\n\n` //Table of Conents
@@ -25,9 +78,9 @@ let generateMarkdown = (answers) => {
   let question5 = `### Deployed Link:\n\n`
   let question6 = `### Demo Link:\n\n`
   let question7 = `## Credits\n\n` //Any Collaborators, Tutorials, etc that require Recognition?
-  let question8 = `## License\n\n` // choice
-  let question9 = `### Email\n\n`
-  let question10 = `### Github\n\n`
+  let question8 = `## License & Badges\n\n` // choice
+  let question9 = `### Email:\n\n`
+  let question10 = `### Github:\n\n`
   
   //Answers
   let answer1 = answers.README1
@@ -73,5 +126,18 @@ let generateMarkdown = (answers) => {
 // add all functions 
 module.exports = {
   generateMarkdown,
+  init,
   
 };
+
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+//function renderLicenseBadge(license) {}
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+//function renderLicenseLink(license) {} // table of contents
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+//function renderLicenseSection(license) {}
