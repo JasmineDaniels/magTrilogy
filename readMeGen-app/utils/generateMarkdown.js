@@ -57,7 +57,9 @@ function init() {
       },  // test
   ])
   .then((answers) => {
-  generateMarkdown(answers)
+    console.log(typeof answers)
+    console.log(answers)
+    generateMarkdown(answers)
 
   })
   .catch((err) => {
