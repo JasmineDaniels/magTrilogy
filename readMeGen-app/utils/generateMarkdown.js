@@ -58,7 +58,6 @@ function init() {
   ])
   .then((answers) => {
     console.log(typeof answers)
-    console.log(answers)
     generateMarkdown(answers)
 
   })
